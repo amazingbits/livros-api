@@ -1,10 +1,10 @@
 <div align="center" style="width: 100%;"><p align="center"><img src="https://doutorie.com.br/wp-content/plugins/phastpress/phast.php/c2VydmljZT1pbWFnZXMmc3JjPWh0dHBzJTNBJTJGJTJGZG91dG9yaWUuY29tLmJyJTJGd3AtY29udGVudCUyRnVwbG9hZHMlMkYyMDIwJTJGMDUlMkZsb2dvLWRvdXRvcmllLnBuZyZjYWNoZU1hcmtlcj0xNzE1NjA3NTYzLTYyMTMmdG9rZW49OTExZDExODBmZjM5MmNiZg.q.png" alt="Doutor-IE"style="width: 150px;" /></p></div>
 <br><br>
 
-<div style="display: inline-flex; gap: 8px; text-align: center;">
-    <img src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="PHP" style="width: 80px;" />
-    <img src="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel" style="width: 80px;" />
-    <img src="https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens" alt="Jwt" style="width: 80px;" />
+<div align="center" style="display: inline-flex; gap: 8px; text-align: center;">
+    <img src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
+    <img src="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel" />
+    <img src="https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens" alt="Jwt" />
 </div>
 
 ## Proposta
