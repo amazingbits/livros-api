@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\V1\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/', function () {
+    return response()->json([]);
+});
+
+// V1
+Route::prefix('v1')->group(function () {
+
+    // Auth routes
+    Route::prefix('auth')->group(function () {
+
+        Route::controller(AuthController::class)->group(function () {
+
+            Route::post('/token', 'login')->name('auth.token');
+            Route::post('me', 'me')->name('auth.me');
+            Route::post('refresh', 'refresh')->name('auth.refresh');
+            Route::post('logout', 'logout')->name('auth.logout');
+        });
+    })->middleware('api');
 });
