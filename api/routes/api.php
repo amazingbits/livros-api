@@ -40,7 +40,11 @@ Route::prefix('v1')->group(function () {
         Route::controller(BookController::class)->group(function () {
 
             Route::get('/', 'get')->name('livros.get');
-            Route::post('/', 'store')->middleware('auth:api')->name('livros.store');
+
+            Route::middleware('auth:api')->group(function () {
+                Route::post('/', 'store')->name('livros.store');
+                Route::post('/{livroId}/importar-indices-xml', 'importIndexByXML')->name('livros.importIndexByXML');
+            });
         });
     });
 });

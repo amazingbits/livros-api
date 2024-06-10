@@ -1,0 +1,10 @@
+<indice>
+    <item pagina="1" titulo="Seção 1">
+        <item pagina="1" titulo="Seção 1.1">
+            <item titulo="Seção 1.1.1" />
+        </item>
+        <item pagina="2" titulo="Seção 1.2" />
+    </item>
+    <item pagina="2" titulo="Seção 2" />
+    <item pagina="3" titulo="Seção 3" />
+</indice>
