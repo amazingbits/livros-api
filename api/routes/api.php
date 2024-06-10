@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\V1\AuthController;
+use App\Http\Controllers\V1\BookController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -33,4 +34,13 @@ Route::prefix('v1')->group(function () {
             Route::post('logout', 'logout')->name('auth.logout');
         });
     })->middleware('api');
+
+    Route::prefix('livros')->group(function () {
+
+        Route::controller(BookController::class)->group(function () {
+
+            Route::get('/', 'get')->name('livros.get');
+            Route::post('/', 'store')->middleware('auth:api')->name('livros.store');
+        });
+    });
 });

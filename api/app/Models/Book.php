@@ -12,6 +12,8 @@ class Book extends Model
     protected $table = 'livros';
     protected $fillable = ['usuario_publicador_id', 'titulo'];
 
+    protected $hidden = ['id', 'usuario_publicador_id', 'created_at', 'updated_at'];
+
     public function user()
     {
         return $this->belongsTo(User::class, 'usuario_publicador_id', 'id');
@@ -19,6 +21,11 @@ class Book extends Model
 
     public function indexes()
     {
-        return $this->hasMany(Index::class);
+        return $this->hasMany(Index::class, 'livro_id')->whereNull('indice_pai_id')->with('subIndexes');
+    }
+
+    public function subIndexes()
+    {
+        return $this->hasMany(Index::class, 'livro_id')->whereNull('indice_pai_id')->with('subIndexes');
     }
 }
